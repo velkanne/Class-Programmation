@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 10 (U2) - Web Storage</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .storage-section {
+      border: 2px solid;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    #local-storage-section { border-color: #17a2b8; }
+    #session-storage-section { border-color: #28a745; }
+    input[type="text"] { padding: 8px; margin-right: 5px; }
+    button { padding: 8px 12px; cursor: pointer; margin: 2px; }
+    #display-area { 
+      margin-top: 15px; 
+      padding: 10px; 
+      background-color: #f8f9fa; 
+      border: 1px solid #dee2e6; 
+      min-height: 50px; 
+      white-space: pre-wrap; /* Para mostrar el JSON formateado */
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Web Storage: localStorage y sessionStorage</h1>
+  <p>Abre las herramientas de desarrollador (F12) y ve a la pestaña "Application" (o "Almacenamiento") para ver cómo se guardan los datos.</p>
+
+  <!-- Sección de LocalStorage -->
+  <div id="local-storage-section" class="storage-section">
+    <h2>LocalStorage (Persistente)</h2>
+    <div>
+      <label for="local-key">Clave:</label>
+      <input type="text" id="local-key" placeholder="Ej: 'usuario'">
+      <label for="local-value">Valor:</label>
+      <input type="text" id="local-value" placeholder="Ej: 'Ana'">
+    </div>
+    <button id="btn-local-save">Guardar en localStorage</button>
+    <button id="btn-local-get">Obtener de localStorage</button>
+    <button id="btn-local-remove">Eliminar de localStorage</button>
+    <button id="btn-local-clear">Limpiar TODO el localStorage</button>
+  </div>
+
+  <!-- Sección de SessionStorage -->
+  <div id="session-storage-section" class="storage-section">
+    <h2>SessionStorage (Temporal)</h2>
+    <div>
+      <label for="session-key">Clave:</label>
+      <input type="text" id="session-key" placeholder="Ej: 'sesionId'">
+      <label for="session-value">Valor:</label>
+      <input type="text" id="session-value" placeholder="Ej: 'xyz-123'">
+    </div>
+    <button id="btn-session-save">Guardar en sessionStorage</button>
+    <button id="btn-session-get">Obtener de sessionStorage</button>
+    <button id="btn-session-remove">Eliminar de sessionStorage</button>
+    <button id="btn-session-clear">Limpiar TODO el sessionStorage</button>
+  </div>
+
+  <div id="display-area">
+    Aquí se mostrarán los datos recuperados...
+  </div>
+
+  <script src="web_storage.js" defer></script>
+
+</body>
+</html>

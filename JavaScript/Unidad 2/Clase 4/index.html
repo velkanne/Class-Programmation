@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 4 (U2) - Eventos y su Manejo</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    #caja-eventos {
+      width: 200px;
+      height: 100px;
+      border: 2px solid #28a745;
+      background-color: #e9f5ec;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+      transition: all 0.3s ease;
+    }
+    form { border: 1px solid #ccc; padding: 15px; margin-top: 20px; }
+    #output { margin-top: 15px; font-weight: bold; }
+    #burbujeo-info { margin-top: 20px; }
+    #padre { padding: 30px; background-color: #f0f0f0; border: 1px solid #aaa; }
+    #hijo { padding: 20px; background-color: #d4edda; border: 1px solid #28a745; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <h1>Manejo de Eventos en JavaScript</h1>
+
+  <button id="btn-click">Haz Clic Aquí</button>
+  <p id="output-click"></p>
+
+  <div id="caja-eventos">
+    Pasa el ratón sobre mí
+  </div>
+
+  <hr>
+
+  <form id="mi-formulario">
+    <h2>Formulario de Ejemplo</h2>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+    <p id="output-teclado"></p>
+    <br><br>
+    <a href="https://www.google.com" id="link-ejemplo">Ir a Google</a>
+    <br><br>
+    <button type="submit">Enviar</button>
+  </form>
+  <p id="output-form"></p>
+
+  <div id="burbujeo-info">
+    <h2>Demostración de Event Bubbling</h2>
+    <div id="padre">
+      Contenedor Padre
+      <div id="hijo">
+        Contenedor Hijo (Haz clic aquí)
+      </div>
+    </div>
+  </div>
+
+  <script src="eventos.js" defer></script>
+
+</body>
+</html>

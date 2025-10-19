@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 3 (U2) - Creación y Eliminación de Elementos</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    #contenedor-dinamico {
+      border: 2px solid #007bff;
+      padding: 15px;
+      margin-top: 20px;
+      min-height: 50px;
+    }
+    .nuevo-item {
+      background-color: #e7f5ff;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-left: 3px solid #007bff;
+    }
+    .a-eliminar {
+      color: #dc3545;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Creación y Eliminación de Nodos del DOM</h1>
+
+  <input type="text" id="input-texto" placeholder="Escribe algo para añadir...">
+  <button id="btn-anadir">Añadir Elemento</button>
+  <button id="btn-anadir-arriba">Añadir Arriba (Prepend)</button>
+
+  <div id="contenedor-dinamico">
+    <!-- Aquí se añadirán nuevos elementos con JavaScript -->
+  </div>
+
+  <hr style="margin: 20px 0;">
+
+  <h2>Lista de Tareas</h2>
+  <ul id="lista-tareas">
+    <li>Tarea 1</li>
+    <li>Tarea 2 (haz clic para eliminar)</li>
+    <li>Tarea 3</li>
+    <li>Tarea 4</li>
+  </ul>
+
+  <script src="crear_eliminar_elementos_dom.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 10 (U4) - Web Workers</title>
+  <style>
+    body { 
+      font-family: sans-serif; 
+      padding: 20px; 
+      transition: background-color 0.5s ease;
+    }
+    button { 
+      font-size: 1.2em; 
+      padding: 10px 15px; 
+      margin: 10px 5px;
+      cursor: pointer; 
+    }
+    #output { 
+      margin-top: 20px; 
+      font-size: 1.1em; 
+      font-weight: bold; 
+      padding: 15px;
+      background-color: #eee;
+      border: 1px solid #ccc;
+      min-height: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Demostración de Web Workers</h1>
+  <p>
+    Los Web Workers permiten ejecutar scripts en un hilo secundario, evitando que tareas pesadas
+    bloqueen el hilo principal (el que se encarga de la interfaz de usuario).
+  </p>
+
+  <button id="btn-iniciar-worker">Iniciar Cálculo Pesado (en Worker)</button>
+  <button id="btn-cambiar-fondo">Cambiar Color de Fondo</button>
+
+  <div id="output">
+    Esperando para iniciar el cálculo...
+  </div>
+
+  <p>
+    <strong>Instrucciones:</strong>
+    1. Haz clic en "Iniciar Cálculo Pesado". El cálculo tardará varios segundos.
+    2. Mientras el worker está calculando, haz clic en "Cambiar Color de Fondo".
+    3. Observarás que la interfaz sigue siendo completamente responsiva, porque el cálculo pesado
+       no está ocurriendo en el hilo principal.
+  </p>
+
+  <script src="main.js"></script>
+
+</body>
+</html>

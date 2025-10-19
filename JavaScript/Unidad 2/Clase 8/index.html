@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 8 (U2) - Fetch API</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    button { font-size: 1em; padding: 10px 15px; cursor: pointer; }
+    #contenedor-datos {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .post {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+    .post h3 { margin: 0 0 5px 0; }
+    .post p { margin: 0; }
+    #estado { font-style: italic; color: #555; }
+  </style>
+</head>
+<body>
+
+  <h1>Uso de la Fetch API para Pedir Datos</h1>
+  <p>Usaremos la API pública <a href="https://jsonplaceholder.typicode.com/" target="_blank">JSONPlaceholder</a> para obtener datos de ejemplo.</p>
+
+  <button id="btn-cargar">Cargar Posts</button>
+  
+  <div id="contenedor-datos">
+    <p id="estado">Haz clic en el botón para cargar los datos...</p>
+    <!-- Los posts cargados se insertarán aquí -->
+  </div>
+
+  <script src="fetch_api.js" defer></script>
+
+</body>
+</html>

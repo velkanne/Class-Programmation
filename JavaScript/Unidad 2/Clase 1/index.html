@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 1 (U2) - Selección de Elementos del DOM</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .importante { color: crimson; }
+    .destacado { background-color: yellow; }
+    footer { margin-top: 30px; border-top: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+
+  <h1 id="titulo-principal">Aprendiendo a Seleccionar Elementos del DOM</h1>
+
+  <p>Este es un párrafo de ejemplo. El DOM (Document Object Model) es la representación en memoria de nuestro HTML, y JavaScript puede interactuar con él.</p>
+
+  <div id="contenedor">
+    <p>Párrafo dentro de un div.</p>
+    <p class="importante">Este párrafo es importante.</p>
+    <button>Botón 1</button>
+  </div>
+
+  <ul id="lista-items">
+    <li class="item">Primer item</li>
+    <li class="item importante">Segundo item (importante)</li>
+    <li class="item">Tercer item</li>
+  </ul>
+
+  <div class="caja">
+    <span>Contenido de la primera caja.</span>
+  </div>
+  <div class="caja destacado">
+    <span>Contenido de la segunda caja (destacada).</span>
+  </div>
+
+  <footer>
+    <p>Pie de página.</p>
+  </footer>
+
+  <!-- Vinculamos nuestro script de JavaScript -->
+  <!-- La palabra clave `defer` asegura que el script se ejecute después de que el HTML ha sido analizado por completo -->
+  <script src="seleccion_elementos_dom.js" defer></script>
+
+</body>
+</html>

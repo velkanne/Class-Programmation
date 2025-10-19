@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 2 (U2) - Modificación de Elementos del DOM</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .resaltado {
+      background-color: #ffdddd;
+      border-left: 4px solid crimson;
+      padding: 10px;
+    }
+    .texto-grande {
+      font-size: 1.5em;
+    }
+    .oculto {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="titulo">Título Original</h1>
+
+  <div id="contenido">
+    <p>Este es el contenido inicial del div. <strong>Este texto está en negrita.</strong></p>
+  </div>
+
+  <img id="logo" src="./logo_antiguo.png" alt="Logo de la empresa">
+
+  <div id="caja-estilos">
+    Pasa el ratón sobre mí para cambiar mi estilo.
+  </div>
+
+  <ul id="lista-clases">
+    <li class="item">Item 1</li>
+    <li class="item">Item 2 (haz clic para resaltar)</li>
+    <li class="item">Item 3</li>
+  </ul>
+
+  <button id="btn-revelar">Mostrar Mensaje Oculto</button>
+  <p id="mensaje-secreto" class="oculto">¡Este es un mensaje secreto!</p>
+
+  <script src="modificar_elementos_dom.js" defer></script>
+
+</body>
+</html>
