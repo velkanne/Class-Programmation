@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesis JS - Clasificador de Iris con TF.js</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Proyecto Tesis: Clasificación de Iris con JS</h1>
+            <p>Entrenamiento de una Red Neuronal en el navegador con aceleración por GPU (via WebGL) y pre-procesamiento de datos en un hilo de CPU separado (Web Worker).</p>
+        </header>
+        
+        <main>
+            <div class="controls">
+                <button id="start-button">Iniciar Proceso de Entrenamiento</button>
+            </div>
+            
+            <div class="output-area">
+                <div class="log-container">
+                    <h2>Log de Procesamiento:</h2>
+                    <pre id="log"></pre>
+                </div>
+                <div class="charts-container">
+                    <h2>Visualizaciones:</h2>
+                    <div class="chart-wrapper">
+                        <h3>Distribución de Datos de Iris</h3>
+                        <canvas id="data-chart"></canvas>
+                    </div>
+                    <div class="chart-wrapper">
+                        <h3>Matriz de Confusión (Rendimiento del Modelo)</h3>
+                        <canvas id="confusion-matrix-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
